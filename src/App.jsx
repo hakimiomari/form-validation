@@ -4,6 +4,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import bgImage from "./assets/bg-1.jpg";
 import Swal from "sweetalert2";
+import { useEffect } from "react";
 
 const schema = yup.object({
   username: yup.string().required("username is required!"),
@@ -15,22 +16,38 @@ function App() {
   const {
     register,
     handleSubmit,
+    reset,
+    formState,
     formState: { errors },
+    formState: { isSubmitSuccessful },
   } = useForm({
     resolver: yupResolver(schema),
+    defaultValues: {
+      username: "",
+      email: "",
+      password: "",
+    },
   });
   const onSubmit = (data) => {
     if (data) {
       Swal.fire({
         position: "top-end",
         icon: "success",
-        title: "Your work has been saved",
+        title: "Your form successfully submitted!",
         showConfirmButton: false,
-        timer: 1500,
+        timer: 2000,
       });
     }
   };
 
+  useEffect(() => {
+    console.log("submit success");
+    if (formState.isSubmitSuccessful) {
+      reset({
+        data: "",
+      });
+    }
+  }, [formState, reset]);
   return (
     <div className="App">
       <img src={bgImage} alt="" />
