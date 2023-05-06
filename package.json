@@ -5,14 +5,10 @@
   "dependencies": {
     "@hookform/resolvers": "^3.0.1",
     "cra-template": "1.2.0",
-    "firebase": "^9.18.0",
-    "firebase-tools": "^11.25.2",
     "react": "^18.2.0",
-    "react-currency-format": "^1.1.0",
     "react-dom": "^18.2.0",
     "react-flip-move": "^3.0.5",
     "react-hook-form": "^7.43.9",
-    "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "sweetalert": "^2.1.2",
     "sweetalert2": "^11.7.3",
@@ -44,7 +40,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
   "author": "",
   "license": "ISC"
 }

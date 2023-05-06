@@ -4,6 +4,7 @@
   flex-direction: column;
   background: #fff;
   margin-top: 1rem;
+  margin-bottom: 3rem;
   border-radius: 5px;
   box-shadow: 0 2px 5px 0px #000;
 }
@@ -16,6 +17,7 @@
 }
 .App > img {
   height: 180px;
+  border-radius: 5px;
 }
 .App .container > form .group {
   display: flex;
